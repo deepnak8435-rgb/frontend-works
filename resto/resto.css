@@ -1,0 +1,254 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    transition:all 0.5s ease; 
+    color: white;
+    text-transform: capitalize;
+}
+body{
+    background-color: rgb(64, 59, 59);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header{
+    position: relative;
+    padding: 2em 0;
+    background:linear-gradient(rgba(99, 86, 86, 0.1),rgba(91, 82, 82, 0.3)),url(src/brgr\ bg.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.logo{
+    font-size: 2em;
+    font-weight:600;
+    flex:1;
+    color:white;
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 70px;
+    margin-right: 1%;
+}
+.navbar{
+    width: 100%;
+    padding: 2rem 3rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    top: 0;
+    position: fixed;
+}
+.nav_items{
+   display: flex; 
+   justify-content:space-between ;
+   align-items: center;
+   flex: 1;
+  
+
+}
+.items{
+    display: flex;
+    justify-content: center;
+}
+.nav_items li{
+    list-style: none;
+    padding: 1rem;
+    
+}
+.nav_items li a{
+    text-decoration: none;
+    transition: 0.3s;
+    font-size:16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.nav_items li::before{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: rgb(200, 65, 15);
+    display: block;
+    margin:auto;
+    transition:0.5s;
+}
+.nav_items li:hover::before{
+    width: 100%;
+}
+.btn{
+    padding: 9px 15px;
+    letter-spacing: 2px;
+    font-size: 15px;
+    cursor:pointer;
+    background-color: orangered;
+    border:2px solid orangered;
+    transition: all 0.5s ease-out;
+}
+.nav menu{
+   display: none; 
+   background-color: brown;
+}
+.main{
+    width: 80%;
+    left: 50%;
+    top: 55%; 
+    transform: translate(-50%,-50%);
+    position: absolute;
+    color: white;
+}
+.heading_1{
+  font-size: 2.3rem;  
+}
+.heading{
+    font-size:3.5rem ;
+    padding: 1.5% 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.main_btn{
+    display: flex;
+}
+.btn1:hover{
+    background-color: transparent;
+}
+.btn2{
+   background-color:transparent; 
+   margin-left: 1%;
+   align-items: center;
+   display: flex;
+}
+.btn2 i{
+    font-size: 2rem;
+    color: orangered;
+    margin-right:6px;
+}
+.btn2:hover{
+background-color:orangered ;
+}
+.btn2:hover li{
+   color: white; 
+}
+/* services */
+.sec{
+    /* padding: 8% 0 3% 0; */
+    padding: 2rem 3rem;
+    width: 85%;
+}
+.head{
+ text-align: center;   
+}
+.heading span{
+    color: orangered;
+}
+.head .heading_1{
+    font-size: 1.4em;
+    color: aliceblue;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+}
+.boxes{
+    margin-top: 4rem;
+    display: grid;
+    gap:2rem;
+    grid-template-columns: repeat(3,1fr);
+}
+.box{
+    text-align: center;
+    padding: 5% 0;
+      box-shadow: rgba(0,0,0,1.35) 0 5px 15px;
+  /* border:2px solid transparent; */
+
+}
+.box img{
+    width: 150px;
+    margin-inline:auto;
+    text-align: center;
+    line-height:1.75rem;
+    color: antiquewhite;
+}
+.box h4{
+    margin:1rem;
+    font-size:1.7rem;
+    font-weight: 500;
+}
+.box:hover{
+    border:2px solid white;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+/* about */
+.about_heading{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:0 6em;
+    align-items: center;
+  
+}
+.about .heading_1,
+.about .heading{
+    grid-column: 1;  
+}
+.about .para{
+    grid-column: 2;
+    text-align: right;
+    color: grey;
+}
+.about_box{
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:2em;
+
+    margin-top: 5%;
+}
+.para1{
+    color:gray;
+    padding-bottom: 5%;
+    font-size: 10px;
+
+}
+.box1{
+    background-color: rgb(210, 207, 203);
+box-shadow:rgba(0,0,0,1.35) 0 3px 8px;
+border: 5px solid chocolate ;
+}
+.box1 img{
+    width:100% ;
+}
+.box1_text{
+    padding: 4%;
+}
+.box1_text button{
+    text-align: center;
+}
+.box1 button{
+    height: 40px;
+   font-size: small;
+   text-align: center;
+}
+.box1_text button::hover{
+    background-color: transparent;
+}
+/* contact */
+.contact{
+ margin-top: 6%;
+   background-color: rgb(224, 229, 229); 
+   width: 100%;
+}
+.contact_box{
+    display: grid;
+    width: 85%;
+    margin: auto;
+    align-items: center;
+    grid-gap:2rem;
+    grid-template-columns:1fr 1fr;
+  
+}
+.left_box .heading_1{
+    color: orangered;
+}
+.right_box{
+ text-align: right;   
+}
