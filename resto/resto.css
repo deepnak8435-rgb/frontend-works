@@ -234,7 +234,7 @@ border: 5px solid chocolate ;
 /* contact */
 .contact{
  margin-top: 6%;
-   background-color: rgb(224, 229, 229); 
+   background-color: rgba(177, 183, 183, 0.768); 
    width: 100%;
 }
 .contact_box{
