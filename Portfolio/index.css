@@ -75,18 +75,26 @@
   width: 120px;
 }
 section {
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
 }
 #about p {
   color: grey;
 }
-.main {
+#qualification h1{
+  color: rgb(40, 84, 48);
+}
+.edu a{
   display: flex;
-  align-items: center;
-  
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(40, 84, 48);
+  font-weight: 600;
+  font-size: 22px;
+}
+#qualification img{
+  width: 30px;
 }
 .para1 {
   width: 400px;
@@ -105,6 +113,13 @@ section {
   object-fit: cover;
   object-position: 15% 16%;
 }
+.main{
+  color:rgb(40, 84, 48); ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .right {
   position: relative;
   left: 400px;
@@ -117,4 +132,98 @@ section {
 .btn2:hover {
   background-color: grey;
   color: white;
+}
+.qual{
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin: 40px auto 0 auto;
+  gap: 40px;
+}
+.study{
+  background-color:#f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(15, 125, 12, 0.08);
+  padding:24px 32px;
+  min-width:220px;
+  transition: 0.3s ease;
+
+}
+.study h3{
+  margin-bottom: 5px;
+  color: rgb(40, 84, 48);
+  font-size: 16px;
+  font-weight: 400;
+}
+.study span{
+  margin-right: 18px;
+  color: #555;
+  font-size: 15px;
+  font-weight:500;
+  background-color: #f8f9fa;
+  padding: 4px 8px;
+margin-bottom: 4px;
+}
+.study p{
+  margin-bottom: 10px;
+  color: #444;
+  font-size: 16px;
+  font-weight: 400;
+}
+.study span img{
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+.tech{
+  padding: 24px 32px;
+  border-radius: 12px;
+  background: #f8f9fa;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  min-width: 160px;
+}
+.tech h3,li{
+color:rgb(40, 84, 48) ;
+}
+.all{
+  display: grid;
+  grid-template-columns: repeat(3,3fr);
+  gap: 30px;
+  width: 90%;
+  margin:0 auto;
+}
+.sub-pro{
+  margin-top: 30px;
+  background-color: rgb(123, 161, 125);
+  border-radius: 12px;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 330px;
+  box-shadow: 0 2px 8px;
+}
+.sub-pro img{
+  width: 250px;
+  height: 140px;
+  margin-bottom: 12px;
+}
+.sub-pro p,h2{
+  color: white;font-size: small;
+}
+
+.project {
+  width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 30px;
+ 
+}
+.main_con{
+ display: flex;
+ justify-content: space-around;
+ margin: 0 auto;
+ width: 90%;
 }
