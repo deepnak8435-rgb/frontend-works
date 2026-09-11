@@ -1,0 +1,226 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.nav {
+  background-color: rgb(1, 1, 1);
+  display: grid;
+  grid-template-columns: 110px 110px 1fr auto;
+  align-items: center;
+  color: white;
+}
+.nav a {
+  display: flex;
+  padding-left: 10px;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  border-right: 1px solid #444;
+  height: 40px;
+}
+.nav h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+.nav span {
+  padding-left: 10px;
+}
+.sec-1 {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("src/dance.png");
+  filter: grayscale(100%) brightness(90%);
+  z-index: -1;
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+}
+.sec-1 h1 {
+  position: relative;
+  top: 30px;
+  left: 30px;
+  letter-spacing: -4px;
+  color: white;
+  width: 400px;
+  font-size: 80px;
+}
+.sec-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px 80px;
+  gap: 50px;
+  height: 200px;
+  background-color: rgb(199, 252, 252);
+}
+.sub1 {
+  flex: 1;
+  font-size: 40px;
+  letter-spacing: -6px;
+}
+.sub2 {
+  flex: 1;
+}
+.sub3 {
+  flex: 1;
+}
+.box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 170px;
+}
+.box1 {
+  background-color: blue;
+}
+.box2 {
+  background-color: black;
+}
+.box3 {
+  background-color: rgb(200, 14, 241);
+  color: black;
+  padding: 30px;
+}
+.b {
+  color: white;
+  padding: 30px;
+}
+.p {
+  display: flex;
+  justify-content: space-around;
+  height: 40px;
+  align-items: center;
+  font-size: small;
+  background-color: blue;
+  color: white;
+}
+.img2 {
+  width: 340px;
+  height: 450px;
+}
+.top {
+  color: white;
+  position: relative;
+  bottom: 450px;
+  font-size: 70px;
+}
+.t {
+  position: relative;
+  bottom: 430px;
+}
+.para {
+  width: 410px;
+  position: relative;
+  bottom: 400px;
+  left: 500px;
+}
+.para p {
+  margin-top: 15px;
+  font-size: smaller;
+  margin-bottom: 15px;
+}
+.btn {
+  width: 130px;
+  height: 40px;
+  background-color: blue;
+  color: white;
+  margin-top: 10px;
+}
+.sec-3 {
+  height: 450px;
+}
+.section-5{
+  display: flex;
+  margin-bottom: -190px;
+
+}
+.sec-4 {
+  height: 450px;
+}
+.left-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 100px;
+  height: 500px;
+  background-color: #f2f2f2;
+  width: 50%;
+}
+.info {
+  width: 100%;
+  position: relative;
+  bottom: 3.5px;
+  background: #d600ff;
+  padding: 20px 30px;
+}
+.m2 {
+  background: blue;
+}
+.info h3 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+.left-content h2 {
+  font-size: 45px;
+}
+.quotes p {
+  font-size: 20px;
+  margin-bottom: 70px;
+}
+.quotes {
+  margin-bottom: 20px;
+}
+.quotes span {
+  font-size: 15px;
+}
+.right-content {
+  width: 50%;
+  overflow: hidden;
+
+  height: 850px;
+}
+.founder-card img {
+  filter: grayscale(100%) brightness(90%);
+  height: 250px;
+  width: 100%;
+  margin-top: -4px;
+  object-fit: cover;
+  display: block;
+}
+.imge2 {
+  object-fit: cover;
+  object-position: center 20%;
+}
+/* last section */
+.sec-last{
+    background: blue;
+    height: 390px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+}
+.last-content{
+    width: 70%;
+    max-width: 700px; 
+}
+.last-content p{
+    color: white;
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.last-btn{
+    width: 170px;
+    height: 45px;
+    background: rgb(180,226,235);
+    border: none;
+      color: rgb(3, 3, 3);
+    cursor: pointer;
+}
+
+.last-btn:hover {
+  background-color: aliceblue;
+}
