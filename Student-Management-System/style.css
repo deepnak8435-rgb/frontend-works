@@ -1,0 +1,238 @@
+/* =========================================
+   1. RESET / BASIC STYLES
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   2. MAIN CONTAINER
+========================================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+
+/* =========================================
+   3. MAIN HEADING
+========================================= */
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #222;
+}
+   /* 4. FORM */
+
+#studentForm {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+
+/* =========================================
+   5. FORM GROUP
+========================================= */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================
+   6. LABEL
+========================================= */
+
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   7. INPUT AND SELECT
+========================================= */
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+}
+
+
+/* =========================================
+   8. INPUT FOCUS
+========================================= */
+
+input:focus,
+select:focus {
+    border-color: #4a90e2;
+}
+
+
+/* =========================================
+   9. ERROR MESSAGE
+========================================= */
+
+small {
+    margin-top: 5px;
+    color: #e74c3c;
+}
+
+
+/* =========================================
+   10. SUBMIT BUTTON
+========================================= */
+
+#submitBtn {
+    grid-column: 1 / -1;
+
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+
+    background-color: #4a90e2;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   11. BUTTON HOVER
+========================================= */
+
+#submitBtn:hover {
+    background-color: #357abd;
+}
+
+
+/* =========================================
+   12. SEARCH AND FILTER
+========================================= */
+
+.controls {
+    margin-top: 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    background-color: white;
+    padding: 20px;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   13. TABLE CONTAINER
+========================================= */
+
+.table-container {
+    margin-top: 30px;
+
+    background-color: white;
+    padding: 20px;
+
+    border-radius: 10px;
+
+    overflow-x: auto;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   14. TABLE
+========================================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+/* =========================================
+   15. TABLE HEADER AND CELLS
+========================================= */
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+
+/* =========================================
+   16. TABLE HEADER
+========================================= */
+
+th {
+    background-color: #f1f3f5;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   17. TABLE ROW HOVER
+========================================= */
+
+tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+
+/* =========================================
+   18. RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    #studentForm {
+        grid-template-columns: 1fr;
+    }
+
+    #submitBtn {
+        grid-column: auto;
+    }
+
+    .controls {
+        grid-template-columns: 1fr;
+    }
+
+}
