@@ -1,0 +1,51 @@
+.app {
+  width: 500px;
+  margin: 50px auto;
+  font-family: Arial, sans-serif;
+}
+h1 {
+  text-align: center;
+}
+/* ADD SECTION */
+.add-section {
+  display: flex;
+  gap: 10px;
+}
+.add-section input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+/* BUTTONS */
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+  background-color: rgb(127, 126, 126);
+  color: #ddd;
+}
+/* FILTERS */
+.filters {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+/* TODO */
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+}
+/* TODO TEXT */
+.todo-item span {
+  flex: 1;
+}
+/* COMPLETED TODO */
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
