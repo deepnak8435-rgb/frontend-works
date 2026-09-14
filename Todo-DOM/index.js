@@ -7,8 +7,6 @@ const allBtn = document.getElementById("allBtn");
 const pendingBtn = document.getElementById("pendingBtn");
 const completedBtn = document.getElementById("completedBtn");
 
-
-
 // Array to store todos
 let todos = [];
 // Current filter
@@ -27,15 +25,11 @@ addBtn.addEventListener("click", function () {
 
   // Add todo to array
   todos.push(newTodo);
-
   // Clear input
   todoInput.value = "";
-
   // Display todos
   displayTodos();});
-// --------------------------------
 // DISPLAY TODOS
-// --------------------------------
 function displayTodos() {
   // Clear existing list
   todoList.innerHTML = "";
@@ -66,7 +60,7 @@ function displayTodos() {
       textSpan.classList.add("completed");}
     // Edit button
     const editBtn = document.createElement("button");
-    editBtn.textContent = "Edit button";
+    editBtn.textContent = "Edit";
     editBtn.addEventListener("click", function () {
       editTodo(todo.id);
     });
@@ -106,8 +100,6 @@ function deleteTodo(id) {
   displayTodos();
 }
 // EDIT TODO
-// --------------------------------
-
 function editTodo(id) {
   const todo = todos.find(function (todo) {
     return todo.id === id;
