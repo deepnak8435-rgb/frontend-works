@@ -1,15 +1,9 @@
 import RecipeCard from "./RecipeCard";
-
-function RecipeList({
-  recipes,
-  favorites,
-  toggleFavorite,
-  setSelectedRecipe
-}) {
+function RecipeList({recipes,favorites,toggleFavorite,setSelectedRecipe})
+ {
   if (recipes.length === 0) {
     return <p className="message">No recipes found.</p>;
   }
-
   return (
     <div className="recipe-grid">
       {recipes.map((recipe) => (
@@ -24,5 +18,4 @@ function RecipeList({
     </div>
   );
 }
-
 export default RecipeList;

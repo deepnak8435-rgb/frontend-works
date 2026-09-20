@@ -1,10 +1,9 @@
-function ShoppingList({shoppingList,setShoppingList}) {
-const removeIngredient = (ingredient) => 
-    {setShoppingList(
-shoppingList.filter((item) => item !== ingredient )
-    );
+function ShoppingList({ shoppingList, setShoppingList }) {
+  const removeIngredient = (ingredient) => {
+    setShoppingList(shoppingList.filter((item) => item !== ingredient));
   };
-  const clearList = () => { setShoppingList([]);
+  const clearList = () => {
+    setShoppingList([]);
   };
   return (
     <section className="shopping-list">
@@ -17,19 +16,14 @@ shoppingList.filter((item) => item !== ingredient )
             {shoppingList.map((ingredient, index) => (
               <li key={index}>
                 <span>{ingredient}</span>
-                <button
-                  onClick={() =>
-                    removeIngredient(ingredient) }>
-                  Remove
-                </button>
+                <button onClick={() => removeIngredient(ingredient)}> Remove</button>
               </li>
             ))}
           </ul>
-          <button onClick={clearList}>
-            Clear Shopping List
-          </button>
-        </>)}
+          <button onClick={clearList}> Clear Shopping List </button>
+        </>
+      )}
     </section>
-     );
+  );
 }
 export default ShoppingList;

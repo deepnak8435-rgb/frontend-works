@@ -6,7 +6,6 @@ import RecipeList from "./components/RecipeList";
 import RecipeDetails from "./components/RecipeDetails";
 import ShoppingList from "./components/ShoppingList";
 import "./App.css";
-
 function App() {
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
@@ -37,15 +36,11 @@ function App() {
   const fetchRecipes = async () => {
     try {
       setLoading(true);
-
       const response = await fetch("https://dummyjson.com/recipes");
-
       if (!response.ok) {
         throw new Error("Failed to fetch recipes");
       }
-
       const data = await response.json();
-
       setRecipes(data.recipes);
     } catch (error) {
       setError(error.message);
@@ -53,65 +48,39 @@ function App() {
       setLoading(false);
     }
   };
-
   const toggleFavorite = (recipe) => {
-    const alreadyFavorite = favorites.find(
-      (item) => item.id === recipe.id
-    );
-
+    const alreadyFavorite = favorites.find((item) => item.id === recipe.id);
     if (alreadyFavorite) {
-      setFavorites(
-        favorites.filter((item) => item.id !== recipe.id)
-      );
+      setFavorites(favorites.filter((item) => item.id !== recipe.id));
     } else {
       setFavorites([...favorites, recipe]);
     }
   };
-
   const addToShoppingList = (ingredients) => {
     setShoppingList((previousList) => {
       const newIngredients = ingredients.filter(
-        (ingredient) => !previousList.includes(ingredient)
+        (ingredient) => !previousList.includes(ingredient),
       );
-
       return [...previousList, ...newIngredients];
     });
   };
-
   const filteredRecipes = recipes.filter((recipe) => {
     const matchesSearch = recipe.name
       .toLowerCase()
       .includes(search.toLowerCase());
-
     const matchesCategory =
-      category === "All" ||
-      recipe.mealType.includes(category);
-
+      category === "All" || recipe.mealType.includes(category);
     return matchesSearch && matchesCategory;
   });
-
   return (
     <div>
       <Navbar />
-
       <main className="container">
-
         <h1>🍴 Food Recipe Finder</h1>
-
-        <SearchBar
-          search={search}
-          setSearch={setSearch}
-        />
-
-        <CategoryFilter
-          category={category}
-          setCategory={setCategory}
-        />
-
+        <SearchBar search={search} setSearch={setSearch} />
+        <CategoryFilter category={category} setCategory={setCategory} />
         {loading && <p className="message">Loading recipes...</p>}
-
         {error && <p className="error">{error}</p>}
-
         {!loading && !error && (
           <RecipeList
             recipes={filteredRecipes}
@@ -120,7 +89,6 @@ function App() {
             setSelectedRecipe={setSelectedRecipe}
           />
         )}
-
         {selectedRecipe && (
           <RecipeDetails
             recipe={selectedRecipe}
@@ -128,12 +96,10 @@ function App() {
             addToShoppingList={addToShoppingList}
           />
         )}
-
         <ShoppingList
           shoppingList={shoppingList}
           setShoppingList={setShoppingList}
         />
-
       </main>
     </div>
   );

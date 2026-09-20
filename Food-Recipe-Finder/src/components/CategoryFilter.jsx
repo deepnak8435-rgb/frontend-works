@@ -1,28 +1,15 @@
 function CategoryFilter({ category, setCategory }) {
-
-  const categories = [
-    "All",
-    "Breakfast",
-    "Lunch",
-    "Dinner",
-    "Dessert"
-  ];
-
+  const categories = ["All", "Breakfast", "Lunch", "Dinner","Dessert"];
   return (
     <div className="categories">
-
       {categories.map((item) => (
         <button
           key={item}
           className={category === item ? "selected" : ""}
-          onClick={() => setCategory(item)}
-        >
+          onClick={() => setCategory(item)}>
           {item}
-        </button>
-      ))}
-
+        </button> ))}
     </div>
   );
 }
-
 export default CategoryFilter;
